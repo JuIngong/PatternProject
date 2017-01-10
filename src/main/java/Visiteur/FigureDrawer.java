@@ -11,7 +11,8 @@ public class FigureDrawer implements IFigureVisitor {
     FigureDrawer(Graphics g) { this.g = g; }
 
     public void visit(Composite c) {
-        //TODO : comment ça marche ?
+        for(AFormeGéométrique child : c)
+            child.accept(this);
     }
 
     public void visit(Cercle c) {
