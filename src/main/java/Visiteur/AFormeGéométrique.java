@@ -7,10 +7,15 @@ import java.awt.*;
  *
  * @author JuIngong
  */
-public  abstract class AFormeGéométrique {
+public abstract class AFormeGéométrique {
 
     private Point point;
     private Rectangle boundingBox;
+
+    public AFormeGéométrique(Point point, Rectangle boundingBox) {
+        this.point = point;
+        this.boundingBox = boundingBox;
+    }
 
     public Point getPoint() {
         return point;
