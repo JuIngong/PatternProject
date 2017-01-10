@@ -17,6 +17,14 @@ public class Ellipse extends AFormeGéométrique {
         this.hauteur = hauteur;
     }
 
+    public int getLargeur() {
+        return largeur;
+    }
+
+    public int getHauteur() {
+        return hauteur;
+    }
+
 
     @Override
     public void accept(IFigureVisitor figureVisitor) {

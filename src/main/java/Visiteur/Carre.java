@@ -14,4 +14,9 @@ public class Carre extends MyRectangle{
         this.cote = cote;
     }
 
+    public int getCote() {
+        return cote;
+    }
+
+
 }

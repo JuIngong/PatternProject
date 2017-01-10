@@ -8,6 +8,10 @@ import java.awt.*;
  * @author JuIngong
  */
 public class Texte extends AFormeGéométrique{
+    public String getTexte() {
+        return texte;
+    }
+
     private String texte;
 
     public Texte(Point point, String texte) {

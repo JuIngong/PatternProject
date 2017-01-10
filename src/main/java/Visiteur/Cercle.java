@@ -14,6 +14,11 @@ public class Cercle extends AFormeGéométrique {
         this.rayon = rayon;
     }
 
+    public int getRayon() {
+        return rayon;
+    }
+
+
     @Override
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
