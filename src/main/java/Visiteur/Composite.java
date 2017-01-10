@@ -37,4 +37,11 @@ public class Composite extends AFormeGéométrique implements Iterable<AFormeGé
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append("children=").append(children == null ? "null" : Arrays.asList(children).toString());
+        return sb.toString();
+    }
 }

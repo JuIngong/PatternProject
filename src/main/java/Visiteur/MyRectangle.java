@@ -29,4 +29,12 @@ public class MyRectangle extends AFormeGéométrique {
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append("longeur=").append(longeur);
+        sb.append(", largeur=").append(largeur);
+        return sb.toString();
+    }
 }

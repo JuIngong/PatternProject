@@ -8,12 +8,10 @@ import java.awt.*;
  * @author JuIngong
  */
 public class Ligne extends AFormeGéométrique {
-    private int epaisseur;
     private Point otherPoint;
 
-    public Ligne(Point point, int epaisseur, Point otherPoint) {
+    public Ligne(Point point, Point otherPoint) {
         super(point, new Rectangle((int) point.getX(), (int) point.getY(), (int) point.getX() - (int) otherPoint.getX(), (int) point.getY() - (int) otherPoint.getY()));
-        this.epaisseur = epaisseur;
         this.otherPoint = otherPoint;
     }
 
@@ -25,5 +23,12 @@ public class Ligne extends AFormeGéométrique {
     @Override
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append(", otherPoint=").append(otherPoint);
+        return sb.toString();
     }
 }

@@ -23,4 +23,11 @@ public class Cercle extends AFormeGéométrique {
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append("rayon=").append(rayon);
+        return sb.toString();
+    }
 }

@@ -34,4 +34,11 @@ public abstract class AFormeGéométrique {
     }
 
     public abstract void accept(IFigureVisitor figureVisitor);
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(" ");
+        sb.append("point=").append(point);
+        return sb.toString();
+    }
 }

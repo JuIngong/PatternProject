@@ -23,4 +23,11 @@ public class Texte extends AFormeGéométrique{
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append("texte='").append(texte).append('\'');
+        return sb.toString();
+    }
 }

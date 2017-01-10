@@ -30,4 +30,12 @@ public class Ellipse extends AFormeGéométrique {
     public void accept(IFigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer(", ");
+        sb.append("largeur=").append(largeur);
+        sb.append(", hauteur=").append(hauteur);
+        return sb.toString();
+    }
 }
