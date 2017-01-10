@@ -17,6 +17,14 @@ public abstract class AFormeGéométrique {
         this.boundingBox = boundingBox;
     }
 
+    public AFormeGéométrique(Point point) {
+        this.point = point;
+    }
+
+    public void generateBoundingBoc(Rectangle boundingBox){
+        this.boundingBox = boundingBox;
+    }
+
     public Point getPoint() {
         return point;
     }

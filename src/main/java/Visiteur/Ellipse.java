@@ -9,11 +9,13 @@ import java.awt.*;
  */
 public class Ellipse extends AFormeGéométrique {
     private int largeur;
-    private int longueur;
+    private int hauteur;
 
     public Ellipse(int largeur, int hauteur, Point point) {
         super(point, new Rectangle(largeur, hauteur));
         this.largeur = largeur;
-        this.longueur = longueur;
+        this.hauteur = hauteur;
     }
+
+
 }
