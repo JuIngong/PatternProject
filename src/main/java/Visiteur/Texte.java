@@ -14,4 +14,9 @@ public class Texte extends AFormeGéométrique{
         super(point);
         this.texte = texte;
     }
+
+    @Override
+    public void accept(IFigureVisitor figureVisitor) {
+        figureVisitor.visit(this);
+    }
 }

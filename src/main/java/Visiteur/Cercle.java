@@ -13,4 +13,9 @@ public class Cercle extends AFormeGéométrique {
         super(point, new Rectangle(rayon, rayon));
         this.rayon = rayon;
     }
+
+    @Override
+    public void accept(IFigureVisitor figureVisitor) {
+        figureVisitor.visit(this);
+    }
 }

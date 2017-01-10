@@ -18,4 +18,8 @@ public class Ellipse extends AFormeGéométrique {
     }
 
 
+    @Override
+    public void accept(IFigureVisitor figureVisitor) {
+        figureVisitor.visit(this);
+    }
 }

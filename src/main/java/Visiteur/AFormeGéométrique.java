@@ -32,4 +32,6 @@ public abstract class AFormeGéométrique {
     public void setPoint(Point point) {
         this.point = point;
     }
+
+    public abstract void accept(IFigureVisitor figureVisitor);
 }

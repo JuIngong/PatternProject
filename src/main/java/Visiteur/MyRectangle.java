@@ -15,4 +15,9 @@ public class MyRectangle extends AFormeGéométrique {
         this.longeur = longeur;
         this.largeur = largeur;
     }
+
+    @Override
+    public void accept(IFigureVisitor figureVisitor) {
+        figureVisitor.visit(this);
+    }
 }
