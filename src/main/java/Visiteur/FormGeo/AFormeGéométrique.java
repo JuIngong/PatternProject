@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -38,7 +40,8 @@ public abstract class AFormeGéométrique {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer(" ");
-        sb.append("point=").append(point);
+        sb.append("point= {x = ").append(point.getX())
+                .append(" , y = ").append(point.getY()).append("}");
         return sb.toString();
     }
 }

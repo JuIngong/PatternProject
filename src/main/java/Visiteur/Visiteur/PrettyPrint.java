@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.Visiteur;
+
+import Visiteur.FormGeo.*;
 
 /**
  * Class created on 10/01/2017
@@ -10,6 +12,7 @@ public class PrettyPrint implements IFigureVisitor {
 
     public void visit(Composite c) {
         String oldTab = tab;
+        System.out.println("Composite :");
         tab += "\t";
         for (AFormeGéométrique child : c)
             child.accept(this);
@@ -20,12 +23,12 @@ public class PrettyPrint implements IFigureVisitor {
         System.out.println(tab + "Circle:" + c);
     }
 
-    public void visit(MyRectangle r) {
-        System.out.println(tab + "Rectangle:" + r);
-    }
-
     public void visit(Carre s) {
         System.out.println(tab + "Square:" + s);
+    }
+
+    public void visit(MyRectangle r) {
+        System.out.println(tab + "Rectangle:" + r);
     }
 
     public void visit(Texte t) {

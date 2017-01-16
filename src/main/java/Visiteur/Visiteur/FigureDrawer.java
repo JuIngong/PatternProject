@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.Visiteur;
+
+import Visiteur.FormGeo.*;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -9,9 +11,9 @@ import java.awt.geom.Rectangle2D;
 public class FigureDrawer implements IFigureVisitor {
 
     Graphics g;
-    FigureDrawer(Graphics g) { this.g = g; }
+    public FigureDrawer(Graphics g) { this.g = g; }
 
-    public void visit(Composite c) {
+    public void visit(Visiteur.FormGeo.Composite c) {
         for(AFormeGéométrique child : c)
             child.accept(this);
     }
@@ -28,7 +30,8 @@ public class FigureDrawer implements IFigureVisitor {
 
     public void visit(Carre s) {
         s.generateBoundingBoc(new Rectangle(s.getPoint().x, s.getPoint().y, s.getCote(), s.getCote()));
-        g.drawRect(s.getPoint().x, s.getPoint().y, s.getCote(), s.getCote());
+        //g.drawRect(s.getPoint().x, s.getPoint().y, s.getCote(), s.getCote());
+        this.visit((MyRectangle)s);
     }
 
     public void visit(Ellipse e) {

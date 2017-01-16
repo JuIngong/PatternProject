@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -33,8 +35,8 @@ public class Ellipse extends AFormeGéométrique {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append("largeur=").append(largeur);
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", largeur=").append(largeur);
         sb.append(", hauteur=").append(hauteur);
         return sb.toString();
     }

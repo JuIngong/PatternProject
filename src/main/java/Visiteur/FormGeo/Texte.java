@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -7,7 +9,7 @@ import java.awt.*;
  *
  * @author JuIngong
  */
-public class Texte extends AFormeGéométrique{
+public class Texte extends AFormeGéométrique {
     public String getTexte() {
         return texte;
     }
@@ -26,8 +28,8 @@ public class Texte extends AFormeGéométrique{
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append("texte='").append(texte).append('\'');
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", texte='").append(texte).append('\'');
         return sb.toString();
     }
 }

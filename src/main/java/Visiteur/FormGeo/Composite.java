@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 import java.util.Arrays;
@@ -40,8 +42,8 @@ public class Composite extends AFormeGéométrique implements Iterable<AFormeGé
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append("children=").append(children == null ? "null" : Arrays.asList(children).toString());
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", children=").append(children == null ? "null" : Arrays.asList(children).toString());
         return sb.toString();
     }
 }

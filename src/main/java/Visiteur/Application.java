@@ -1,5 +1,10 @@
 package Visiteur;
 
+import Visiteur.FormGeo.*;
+import Visiteur.FormGeo.Composite;
+import Visiteur.Visiteur.IFigureVisitor;
+import Visiteur.Visiteur.PrettyPrint;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,5 +27,9 @@ public class Application {
         for (AFormeGéométrique g : list ) {
             g.accept(figureVisitor);
         }
+        AFormeGéométrique[] test = {new Carre(new Point(98, 15), 50),
+        new MyRectangle(new Point(54, 98), 79, 47),
+        new Cercle(new Point(654, 878), 20)};
+        new Composite(new Point(65,874), test).accept(figureVisitor);
     }
 }

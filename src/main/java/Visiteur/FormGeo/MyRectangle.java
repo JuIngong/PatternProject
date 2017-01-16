@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -32,8 +34,8 @@ public class MyRectangle extends AFormeGéométrique {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append("longeur=").append(longeur);
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", longeur=").append(longeur);
         sb.append(", largeur=").append(largeur);
         return sb.toString();
     }

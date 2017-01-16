@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -27,8 +29,9 @@ public class Ligne extends AFormeGéométrique {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append(", otherPoint=").append(otherPoint);
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", otherPoint = {x = ").append(otherPoint.getX())
+                .append(" , y = ").append(otherPoint.getY()).append("}");
         return sb.toString();
     }
 }

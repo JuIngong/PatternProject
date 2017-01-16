@@ -1,4 +1,6 @@
-package Visiteur;
+package Visiteur.FormGeo;
+
+import Visiteur.Visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -26,8 +28,8 @@ public class Cercle extends AFormeGéométrique {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer(", ");
-        sb.append("rayon=").append(rayon);
+        final StringBuffer sb = new StringBuffer(super.toString());
+        sb.append(", rayon=").append(rayon);
         return sb.toString();
     }
 }
