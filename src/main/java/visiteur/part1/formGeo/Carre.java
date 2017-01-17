@@ -1,6 +1,6 @@
-package Visiteur.FormGeo;
+package visiteur.part1.formGeo;
 
-import Visiteur.Visiteur.IFigureVisitor;
+import visiteur.part1.visiteur.IFigureVisitor;
 
 import java.awt.*;
 

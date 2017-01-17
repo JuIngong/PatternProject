@@ -1,9 +1,9 @@
-package Visiteur;
+package visiteur.part1;
 
-import Visiteur.FormGeo.*;
-import Visiteur.FormGeo.Composite;
-import Visiteur.Visiteur.IFigureVisitor;
-import Visiteur.Visiteur.PrettyPrint;
+import visiteur.part1.formGeo.*;
+import visiteur.part1.formGeo.Composite;
+import visiteur.part1.visiteur.IFigureVisitor;
+import visiteur.part1.visiteur.PrettyPrint;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class Application {
         list.add(new MyRectangle(new Point(43, 54), 12, 34, Color.BLACK, Color.blue));
         list.add(new Cercle(new Point(54, 65), 23, Color.BLACK, Color.blue));
         list.add(new Ellipse(34, 43, new Point(76, 765), Color.BLACK, Color.blue));
-        list.add(new Ligne(new Point(54, 65), new Point(43, 80), Color.BLACK, Color.blue));
+        list.add(new Ligne(new Point(54, 65), new Point(43, 80), Color.BLACK));
         list.add(new Texte(new Point(54, 65), "Test", Color.BLACK, Color.blue));
         for (AFormeGéométrique g : list ) {
             g.accept(figureVisitor);

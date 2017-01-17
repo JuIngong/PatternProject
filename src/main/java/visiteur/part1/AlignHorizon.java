@@ -1,4 +1,4 @@
-package Visiteur;
+package visiteur.part1;
 
 /**
  * Created by JuIngong on 17/01/2017.

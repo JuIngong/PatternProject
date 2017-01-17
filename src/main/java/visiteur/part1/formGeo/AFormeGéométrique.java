@@ -1,8 +1,8 @@
-package Visiteur.FormGeo;
+package visiteur.part1.formGeo;
 
-import Visiteur.AlignHorizon;
-import Visiteur.AlignVerti;
-import Visiteur.Visiteur.IFigureVisitor;
+import visiteur.part1.AlignHorizon;
+import visiteur.part1.AlignVerti;
+import visiteur.part1.visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -85,6 +85,10 @@ public abstract class AFormeGéométrique {
 
     public void setAlignHorizon(AlignHorizon alignHorizon) {
         this.alignHorizon = alignHorizon;
+    }
+
+    public Rectangle getBoundingBox() {
+        return boundingBox;
     }
 
     @Override

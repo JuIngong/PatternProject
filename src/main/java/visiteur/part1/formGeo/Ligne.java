@@ -1,6 +1,6 @@
-package Visiteur.FormGeo;
+package visiteur.part1.formGeo;
 
-import Visiteur.Visiteur.IFigureVisitor;
+import visiteur.part1.visiteur.IFigureVisitor;
 
 import java.awt.*;
 
@@ -12,8 +12,8 @@ import java.awt.*;
 public class Ligne extends AFormeGéométrique {
     private Point otherPoint;
 
-    public Ligne(Point point, Point otherPoint, Color backGroundColor, Color boderColor) {
-        super(point, new Rectangle((int) point.getX(), (int) point.getY(), (int) point.getX() - (int) otherPoint.getX(), (int) point.getY() - (int) otherPoint.getY()), backGroundColor, boderColor);
+    public Ligne(Point point, Point otherPoint, Color backGroundColor) {
+        super(point, new Rectangle((int) point.getX(), (int) point.getY(), (int) point.getX() - (int) otherPoint.getX(), (int) point.getY() - (int) otherPoint.getY()), backGroundColor, backGroundColor);
         this.otherPoint = otherPoint;
     }
 

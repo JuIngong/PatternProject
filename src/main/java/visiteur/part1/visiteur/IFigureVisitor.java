@@ -1,6 +1,6 @@
-package Visiteur.Visiteur;
+package visiteur.part1.visiteur;
 
-import Visiteur.FormGeo.*;
+import visiteur.part1.formGeo.*;
 
 /**
  * Created by frederic on 10/01/2017.
