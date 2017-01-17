@@ -11,8 +11,8 @@ public class Cercle extends AFormeGéométrique {
 
     private int rayon;
 
-    public Cercle(Point point, int rayon){
-        super(point, new Rectangle(rayon, rayon));
+    public Cercle(Point point, int rayon, Color backGroundColor, Color boderColor){
+        super(point, new Rectangle(rayon, rayon), backGroundColor, boderColor);
         this.rayon = rayon;
     }
 

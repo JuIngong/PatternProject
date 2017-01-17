@@ -18,18 +18,20 @@ public class Application {
     public static void main(String[] args) {
         IFigureVisitor figureVisitor = new PrettyPrint();
         List<AFormeGéométrique> list = new ArrayList<>();
-        list.add(new Carre(new Point(0, 0), 25));
-        list.add(new MyRectangle(new Point(43, 54), 12, 34));
-        list.add(new Cercle(new Point(54, 65), 23));
-        list.add(new Ellipse(34, 43, new Point(76, 765)));
-        list.add(new Ligne(new Point(54, 65), new Point(43, 80)));
-        list.add(new Texte(new Point(54, 65), "Test"));
+        Carre c = new Carre(new Point(0, 0), 25, Color.BLACK, Color.blue);
+        c.changeAlignements(AlignHorizon.DROITE, AlignVerti.BAS);
+        list.add(c);
+        list.add(new MyRectangle(new Point(43, 54), 12, 34, Color.BLACK, Color.blue));
+        list.add(new Cercle(new Point(54, 65), 23, Color.BLACK, Color.blue));
+        list.add(new Ellipse(34, 43, new Point(76, 765), Color.BLACK, Color.blue));
+        list.add(new Ligne(new Point(54, 65), new Point(43, 80), Color.BLACK, Color.blue));
+        list.add(new Texte(new Point(54, 65), "Test", Color.BLACK, Color.blue));
         for (AFormeGéométrique g : list ) {
             g.accept(figureVisitor);
         }
-        AFormeGéométrique[] test = {new Carre(new Point(98, 15), 50),
-        new MyRectangle(new Point(54, 98), 79, 47),
-        new Cercle(new Point(654, 878), 20)};
-        new Composite(new Point(65,874), test).accept(figureVisitor);
+        AFormeGéométrique[] test = {new Carre(new Point(98, 15), 50, Color.BLACK, Color.blue),
+        new MyRectangle(new Point(54, 98), 79, 47, Color.BLACK, Color.blue),
+        new Cercle(new Point(654, 878), 20, Color.BLACK, Color.blue)};
+        new Composite(new Point(65,874), test, Color.BLACK, Color.blue).accept(figureVisitor);
     }
 }

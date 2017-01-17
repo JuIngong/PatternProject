@@ -12,8 +12,8 @@ public class MyRectangle extends AFormeGéométrique {
     private int longeur;
     private int largeur;
 
-    public MyRectangle(Point point, int longeur, int largeur){
-        super(point, new Rectangle(longeur, largeur));
+    public MyRectangle(Point point, int longeur, int largeur, Color backGroundColor, Color boderColor){
+        super(point, new Rectangle(longeur, largeur), backGroundColor, boderColor);
         this.longeur = longeur;
         this.largeur = largeur;
     }

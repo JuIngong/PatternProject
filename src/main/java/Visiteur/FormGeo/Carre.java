@@ -11,8 +11,8 @@ public class Carre extends MyRectangle {
 
     private int cote;
 
-    public Carre(Point point, int cote){
-        super(point, cote, cote);
+    public Carre(Point point, int cote, Color backGroundColor, Color boderColor){
+        super(point, cote, cote, backGroundColor, boderColor);
         this.cote = cote;
     }
 

@@ -13,8 +13,8 @@ public class Ellipse extends AFormeGéométrique {
     private int largeur;
     private int hauteur;
 
-    public Ellipse(int largeur, int hauteur, Point point) {
-        super(point, new Rectangle(largeur, hauteur));
+    public Ellipse(int largeur, int hauteur, Point point, Color backGroundColor, Color boderColor) {
+        super(point, new Rectangle(largeur, hauteur), backGroundColor, boderColor);
         this.largeur = largeur;
         this.hauteur = hauteur;
     }

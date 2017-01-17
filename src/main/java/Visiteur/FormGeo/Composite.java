@@ -30,8 +30,8 @@ public class Composite extends AFormeGéométrique implements Iterable<AFormeGé
         return null;
     }
 
-    public Composite(Point point, AFormeGéométrique[] children) {
-        super(point);
+    public Composite(Point point, AFormeGéométrique[] children, Color backGroundColor, Color boderColor) {
+        super(point, backGroundColor, boderColor);
         this.children = children;
     }
 

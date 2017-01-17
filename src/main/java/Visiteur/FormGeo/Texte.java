@@ -16,8 +16,8 @@ public class Texte extends AFormeGéométrique {
 
     private String texte;
 
-    public Texte(Point point, String texte) {
-        super(point);
+    public Texte(Point point, String texte, Color backGroundColor, Color boderColor) {
+        super(point, backGroundColor, boderColor);
         this.texte = texte;
     }
 
